@@ -1,0 +1,18 @@
+$ sim run --scenario scenario-aedroxh7.yaml --ascii --output ../results/console.txt --frames ../results/frames.full.txt
+Scenario: scenario-aedroxh7.yaml
+  fc
+Output: ../results/console.txt
+Elapsed: 0.624s
+FAIL: 4 expected strings missing
+  missing:  "Board sensors: /etc/init.d/rc.board_sensors"
+  missing:  "icm42688p #0 on SPI bus 2"
+  missing:  "dps310 #0 on I2C bus 2 address 0x76"
+  missing:  "logger started"
+  last 7 lines of UART output:
+  [boot] 
+  Fault Log info File No 4 Length 3177 flags:0x01 state:1
+  [boot] 
+  Fault Log is Armed
+  
+  NuttShell (NSH) NuttX-12.12.0
+  nsh> .[K

@@ -1,0 +1,7 @@
+[0.083132s] (uart8) [boot] 
+[0.084695s] (uart8) Fault Log info File No 4 Length 3177 flags:0x01 state:1
+[0.094594s] (uart8) [boot] 
+[0.096157s] (uart8) Fault Log is Armed
+[0.099630s] (uart8) 
+[0.099978s] (uart8) NuttShell (NSH) NuttX-12.12.0
+[0.105361s] (uart8) nsh> .[K

@@ -1,0 +1,34 @@
+# Practice run: an existing PX4 board on Simantic, before your own port exists.
+# AEDROXH7 uses an STM32H743VI like your board. Its pin map below is copied
+# from PX4-Autopilot boards/aedrox/aedroxh7 (src/spi.cpp, src/i2c.cpp,
+# nuttx-config/nsh/defconfig), so nothing here is a guess.
+#
+#   SPI2 ICM-42688-P   CS PB12
+#   I2C2 DPS310 baro   address 0x76
+#   UART8 NSH console  57600 baud
+#
+# Not simulated: the MAX7456 OSD on SPI1 and the W25N NAND log flash on
+# SPI3. Expect PX4 to print errors about those; they are not failures here.
+#
+# Run from this directory:
+#   sim check --scenario scenario-aedroxh7.yaml
+#   sim run --scenario scenario-aedroxh7.yaml --ascii --frames frames.txt --trace-out run.jsonl
+
+machines:
+  fc:
+    mcu: STM32H743VI
+    elf: ../../PX4-Autopilot/build/aedrox_aedroxh7_default/aedrox_aedroxh7_default.elf
+    parts:
+      - { name: imu0, type: spi-device, bus: spi2, cs: PB12, script: peers/icm42688p_peer.py }
+      - { name: baro, type: i2c-device, bus: i2c2, address: 0x76, script: peers/dps310_peer.py }
+
+timeout: 10
+
+expect:
+  - "NuttShell"
+  - "Board sensors: /etc/init.d/rc.board_sensors"
+  - "icm42688p #0 on SPI bus 2"
+  - "dps310 #0 on I2C bus 2 address 0x76"
+  - "logger started"
+expect_absent:
+  - "HardFault"
