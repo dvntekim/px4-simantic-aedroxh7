@@ -1,0 +1,17 @@
+aedroxh7: mount the /etc ROMFS so the startup scripts run
+
+Without CONFIG_ETC_ROMFS the image has rcS compiled in but NuttX never
+mounts it at /etc, so NSH starts and nothing else does: no sensor drivers,
+no logger, no MAVLink.
+
+diff --git a/boards/aedrox/aedroxh7/nuttx-config/nsh/defconfig b/boards/aedrox/aedroxh7/nuttx-config/nsh/defconfig
+index 647aaea9a3..73eac7651f 100644
+--- a/boards/aedrox/aedroxh7/nuttx-config/nsh/defconfig
++++ b/boards/aedrox/aedroxh7/nuttx-config/nsh/defconfig
+@@ -245,3 +245,6 @@ CONFIG_USBDEV_BUSPOWERED=y
+ CONFIG_USBDEV_MAXPOWER=500
+ CONFIG_USEC_PER_TICK=1000
+ CONFIG_WATCHDOG=y
++CONFIG_ETC_ROMFS=y
++CONFIG_ETC_CROMFS=y
++CONFIG_ETC_ROMFSSECTSIZE=128

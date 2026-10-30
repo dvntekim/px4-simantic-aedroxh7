@@ -2,6 +2,95 @@
 [0.084695s] (uart8) Fault Log info File No 4 Length 3177 flags:0x01 state:1
 [0.094594s] (uart8) [boot] 
 [0.096157s] (uart8) Fault Log is Armed
-[0.099630s] (uart8) 
-[0.099978s] (uart8) NuttShell (NSH) NuttX-12.12.0
-[0.105361s] (uart8) nsh> .[K
+[0.099630s] (uart8) HW arch: AEDROX_AEDROXH7
+[0.104146s] (uart8) PX4 git-hash: c0d2c543080517c5455b790fd42097919b914363
+[0.113871s] (uart8) PX4 version: 1.18.0 80 (17956992)
+[0.119950s] (uart8) PX4 git-branch: main
+[0.123771s] (uart8) OS: NuttX
+[0.125681s] (uart8) OS version: Release 12.12.0 (202113279)
+[0.132801s] (uart8) OS git-hash: 172b8fd7dbcfa0ea29e3be5b09fe8a392ab843a6
+[0.142353s] (uart8) Build datetime: Oct 30 2026 13:05:21
+[0.148953s] (uart8) Build uri: localhost
+[0.152774s] (uart8) Build variant: default
+[0.156942s] (uart8) Toolchain: GNU GCC, 13.2.1 20231009
+[0.163368s] (uart8) PX4GUID: 000600000000c0ffee03c0ffee02c0ffee01
+[0.171530s] (uart8) MCU: STM32H7[4|5]xxx, rev. V
+[0.176741s] (uart8) INFO  [param] parameter storage empty, initializing
+[0.185945s] (uart8) ERROR [param] open backup '' failed (6)
+[0.193066s] (uart8) ERROR [init] param load-or-init failed
+[0.200013s] (uart8) ERROR [bsondump] open '/fs/mtd_params' failed (2)
+[0.208870s] (uart8) Board architecture defaults: /etc/init.d/rc.board_arch_defaults
+[0.220159s] (uart8) Board defaults: /etc/init.d/rc.board_defaults
+[0.228321s] (uart8) ERROR [param] Parameter COM_ARM_SDCARD not found.
+[0.237178s] (uart8) ERROR [init] no external airframe storage, skipping
+[0.246383s] (uart8) ERROR [init] No airframe file found for SYS_AUTOSTART value
+[0.256977s] (uart8) INFO  [dataman] data manager RAM size is 68528 bytes
+[0.266355s] (uart8) Board sensors: /etc/init.d/rc.board_sensors
+[0.274171s] (uart8) icm42688p #0 on SPI bus 2 rotation 2
+[0.280770s] (uart8) dps310 #0 on I2C bus 2 address 0x76
+[0.287196s] (uart8) nsh: icm20948_i2c_passthrough: command not found
+[0.343322s] (uart8) ekf2 [508:237]
+[0.346100s] (uart8) nsh: px4io: command not found
+[0.351556s] (uart8) INFO  [dshot] No channels configured
+[0.358156s] (uart8) INFO  [dshot] Exiting
+[0.362150s] (uart8) INFO  [uavcan] Node ID 1, bitrate 1000000
+[0.369618s] (uart8) ERROR [uavcan] CentralizedServer init: -1
+[0.377086s] (uart8) ERROR [uavcan] UavcanServers init: -1
+[0.383859s] (uart8) No autostart ID found
+[0.387854s] (uart8) Starting Main GPS on /dev/ttyS1
+[0.393585s] (uart8) Starting RC Input Driver on /dev/ttyS2
+[0.400532s] (uart8) Starting MAVLink on /dev/ttyS0
+[0.406089s] (uart8) INFO  [mavlink] mode: Normal, data rate: 2000 B/s on /dev/ttyS0 @ 57600B
+[0.385135s] (usart1) .N................................................C.......C.........+.....................
+[0.392995s] (usart2) .b..'.......R ...R ...R ...s....s....t....t....
+[0.418941s] (uart8) INFO  [cdcacm_autostart] Starting CDC/ACM autostart
+[0.428145s] (uart8) nsh: payload_deliverer: command not found
+[0.435613s] (uart8) Board extras: /etc/init.d/rc.board_extras
+[0.443081s] (uart8) INFO  [logger] logger started (mode=all)
+[0.450376s] (uart8) INFO  [logger] log root dir created: /fs/flash/log
+[0.459407s] (uart8) 
+[0.459754s] (uart8) NuttShell (NSH) NuttX-12.12.0
+[0.465138s] (uart8) nsh> .[K
+[1.080909s] (usart1) .......*..........
+[1.387913s] (usart1) .	..................4
+[1.627925s] (usart1) .............?.......$..&2....................(................?I!C.............................9...........................zA
+[2.082909s] (usart1) .......*........Y........|........................
+[2.185985s] (usart1) ....	.........M....
+[2.185029s] (uart8) WARN  [health_and_arming_checks] Too many arming check events (0, 15 > 14). Not reporting all
+[2.201528s] (uart8) WARN  [health_and_arming_checks] Preflight Fail: No valid data from Accel 0
+[2.189459s] (usart1) .....'7..<............0...0\.
+[2.214901s] (uart8) WARN  [health_and_arming_checks] Preflight Fail: barometer 0 missing
+[2.227058s] (uart8) WARN  [health_and_arming_checks] Preflight Fail: No valid data from Gyro 0
+[2.240257s] (uart8) WARN  [health_and_arming_checks] Preflight Fail: Missing FMU SD Card
+[2.383913s] (usart1) .	...................
+[2.412991s] (usart2) .b..(.............!...................!.......R,
+[2.685906s] (usart2) .b..'.......R ...R ...R ...s....s....t....t....
+[3.083909s] (usart1) .......*..........
+[3.385920s] (usart1) .	..................
+[3.541948s] (usart1) .............2.(.............H!.4..C............................[...........P.4.....w..........
+[4.084909s] (usart1) .......*........g.
+[4.123956s] (usart1) .......|........................
+[4.207931s] (usart1) .).................................................J...................?.
+[4.387913s] (usart1) .	..................'
+[4.705903s] (usart2) .b..(.............!...................!........z
+[4.981773s] (usart2) .b..'.......R ...R ...R ...s....s....t....t....
+[5.085910s] (usart1) .......*........$.
+[5.191960s] (usart1) .............
+[5.383913s] (usart1) .	.................S.
+[5.449927s] (usart1) .............$.(.............H!.4..C .........................................R..............p.
+[6.087017s] (usart1) .......*..........
+[6.145958s] (usart1) .......|......................9.
+[6.385913s] (usart1) .	...................
+[7.005771s] (usart2) .b..(..........%..!................%..!.......p.
+[7.087910s] (usart1) .......*..........
+[7.279818s] (usart2) .b..'.......R ...R ...R ...s....s....t....t....
+[7.363935s] (usart1) .... ......./..(..!..........H!.4..C ................................."......0o.....F....... .L.	..#..............?.
+[8.029931s] (usart1) .)..$...............................................@....%.............(A
+[8.088909s] (usart1) ....&..*........T
+[8.173958s] (usart1) ....'..|............................(.......r
+[8.383913s] (usart1) .	..)................
+[9.089909s] (usart1) ....*..*.........1
+[9.277928s] (usart1) ....+..........(..,..........H!.4..C"...........................c.....-.....te......S.......*..
+[9.299816s] (usart2) .b..(.............!...................!.........
+[9.385913s] (usart1) .	...................
+[9.573781s] (usart2) .b..'.......R ...R ...R ...s....s....t....t....
